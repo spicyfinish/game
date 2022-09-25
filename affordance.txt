@@ -1,0 +1,1 @@
+Player can navigate from a first-person perspective.
