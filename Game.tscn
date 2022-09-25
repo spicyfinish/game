@@ -32,3 +32,6 @@ margin_right = 84.0
 margin_bottom = 29.5
 text = "Paused"
 align = 1
+
+[connection signal="paused" from="." to="World" method="_on_Game_paused"]
+[connection signal="resumed" from="." to="World" method="_on_Game_resumed"]
