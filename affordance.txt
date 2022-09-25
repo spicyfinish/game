@@ -1,1 +1,2 @@
 Player can navigate from a first-person perspective.
+Player can pause and resume the game.

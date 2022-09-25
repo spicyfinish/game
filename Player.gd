@@ -1,9 +1,9 @@
 extends KinematicBody
 
-export var speed = 10
-export var acceleration = 5
+export var speed = 4
+export var acceleration = 4
 export var gravity = 0.98
-export var mouse_sensitivity = 0.005
+export var mouse_sensitivity = 0.003
 export var vertical_fov = PI / 4
 
 var velocity = Vector3.ZERO
@@ -32,6 +32,7 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("move_right"):
 		direction += head_basis.x
 	direction = direction.normalized()
-	velocity = velocity.linear_interpolate(direction * speed, acceleration * delta)
+	#velocity = velocity.linear_interpolate(direction * speed, acceleration * delta)
+	velocity = direction * speed
 	velocity.y -= gravity
 	velocity = move_and_slide(velocity, Vector3.UP)
